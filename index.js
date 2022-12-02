@@ -29,7 +29,9 @@ app.use("/auth", authRouter);
 app.get("/", isLoggedIn, (req, res) => {
     res.render("index", { user: req.user });
 });
-
+app.get('/admin', isLoggedIn, function(req, res) {
+    res.render('admin', { user: req.session.passport.user })
+});
 app.listen(3000, () => {
     console.log("Server is up and running at the port 3000");
 });

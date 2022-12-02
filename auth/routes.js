@@ -1,6 +1,5 @@
 import { Router } from "express";
 import passport from "passport";
-
 export const authRouter = Router();
 
 authRouter.get("/logout", (req, res) => {

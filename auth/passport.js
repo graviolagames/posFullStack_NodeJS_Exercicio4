@@ -14,9 +14,9 @@ export function initializeStrategies(app) {
     passport.use(
         new GithubStrategy(
             {
-                clientID: "Iv1.548ff23fa6488557",
-                clientSecret: "b653e39e57df1ee1fd9dfb1a324b55f61b4e7f84",
-                callbackURL: `${urls.application}/auth/login/github/callback`,
+                clientID: "Iv1.f9ea5b0ec26b1fed",
+                clientSecret: "4b53ca7d46683ce0afc9b24a9f41f6c6ca2f5c92",
+                callbackURL: `${urls.application}/auth/github/callback`,
             },
             function (accessToken, refreshToken, profile, done) {
                 return done(null, profile);
